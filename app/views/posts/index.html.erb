@@ -15,6 +15,13 @@
           <%= post.body %>
         </td>
       </tr>
+      <td>
+        <%= link_to 'Ver', post_path(post) %>
+        <br>
+        <%= link_to 'Editar', edit_post_path(post) %>
+        <br>        
+        <%= link_to 'Eliminar', post, method: :delete, data: {confirm: "Desea eliminar el registro"} %>
+      </td>
     <% end %>
   </tbody>
 </table>
