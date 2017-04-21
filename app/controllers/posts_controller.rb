@@ -10,7 +10,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @comment = @post.commets.build
   end
+
   def create
     @post = Post.create(post_params)
     if @post.save

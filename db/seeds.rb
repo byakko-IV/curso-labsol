@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+6.times do 
+  Commet.create(content: Faker::ChuckNorris.fact, post_id: 10)
+end
