@@ -17,6 +17,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'faker'
+gem 'devise'
+gem 'haml-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri

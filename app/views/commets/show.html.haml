@@ -1,0 +1,10 @@
+%p#notice= notice
+%p
+  %strong Content:
+  = @commet.content
+%p
+  %strong Post:
+  = @commet.post
+= link_to 'Edit', edit_commet_path(@commet)
+|
+\#{link_to 'Back', commets_path}

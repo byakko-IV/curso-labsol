@@ -1,0 +1,16 @@
+.row
+  %h2
+    %span
+      = @post.title
+  %p
+    = @post.body
+.row
+  = render partial: 'commets/form'
+%hr
+.row
+  %h1 Comments
+  - @post.commets.each do |comment|
+    .col-md-12
+      = comment.content
+      = link_to "Eliminar", post_commet_path(post_id: @post, comment_id: comment), method: :delete, data: {confirm: "¿Estás seguro?"}, class: 'danger  pull-right'
+      %br

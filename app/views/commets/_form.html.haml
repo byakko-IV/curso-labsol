@@ -1,0 +1,7 @@
+= form_for([@post, @comment]) do |f|
+  .form-group
+    = f.label :content, class: 'label-control'
+    = f.text_area :content, class: 'form-control'
+    = f.hidden_field :post_id
+  .form-group
+    = f.submit 'Guardar', class: 'btn btn-success'
