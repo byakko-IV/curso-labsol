@@ -4,7 +4,7 @@
       %td title
       %td body
   %tbody
-    - @posts.each do |post|
+    - @category.posts.each do |post|
       %tr
         %td
           = post.title
@@ -12,6 +12,7 @@
           = post.body
         %td
           = link_to 'Ver', post_path(post), class: 'btn btn-info'
+          %br/
           = show_links(post)
 
 = link_to "crear post", new_post_path, class: 'btn btn-primary'

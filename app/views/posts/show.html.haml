@@ -4,6 +4,11 @@
       = @post.title
   %p
     = @post.body
+  %p
+    = @post.user.email
+  %ul
+    - @post.categories.each do |category|
+      %li= category.name
 .row
   = render partial: 'commets/form'
 %hr

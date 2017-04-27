@@ -5,5 +5,11 @@
   .form-group
     = f.label :body, class: 'control-label' 
     = f.text_area :body, class: 'form-control'
+    = f.hidden_field :user_id, value: @post.user.id
+  .form_group
+    - Category.all.each_with_index do |category, index|
+      = check_box_tag 'post[category_ids][]', category.id, id: "check_posts#{index}"
+      %label{for: "check_posts#{index}"}
+        = category.name
   .form-group
     = f.submit "Guardar", class: 'btn btn-success'
